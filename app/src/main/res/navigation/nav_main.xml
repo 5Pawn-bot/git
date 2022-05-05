@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/welcomeFragment">
+
+    <fragment
+        android:id="@+id/mainFragmentITSupport"
+        android:name="com.robot.robotappliaktion.BlankFragment"
+        android:label="fragment_blank"
+        tools:layout="@layout/fragment_blank" >
+        <action
+            android:id="@+id/mainITtoRobotikExplained"
+            app:destination="@id/fragmentRobotikExplained" />
+        <action
+            android:id="@+id/mainITtoVortraege"
+            app:destination="@id/fragmentVortraege" />
+        <action
+            android:id="@+id/mainITtoCafeteria"
+            app:destination="@id/fragmentCafeteria" />
+        <action
+            android:id="@+id/mainITSupporttoMain"
+            app:destination="@id/mainFragmentActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragmentEntertainment"
+        android:name="com.robot.robotappliaktion.BlankFragment2"
+        android:label="fragment_blank2"
+        tools:layout="@layout/fragment_blank2" >
+        <action
+            android:id="@+id/mainEntertainmenttoITQuiz"
+            app:destination="@id/fragmentITQuiz" />
+        <action
+            android:id="@+id/mainEntertainmenttoITJokes"
+            app:destination="@id/fragmentITJokes" />
+        <action
+            android:id="@+id/mainEntertainmenttoMain"
+            app:destination="@id/mainFragmentActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentRobotikExplained"
+        android:name="com.robot.robotappliaktion.BlankFragment3"
+        android:label="fragment_blank3"
+        tools:layout="@layout/fragment_blank3" >
+        <action
+            android:id="@+id/robotikErklaerttoMainIT"
+            app:destination="@id/mainFragmentITSupport" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentVortraege"
+        android:name="com.robot.robotappliaktion.BlankFragment4"
+        android:label="fragment_blank4"
+        tools:layout="@layout/fragment_blank4" >
+        <action
+            android:id="@+id/vortraegetoMainIT"
+            app:destination="@id/mainFragmentITSupport" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentCafeteria"
+        android:name="com.robot.robotappliaktion.BlankFragment5"
+        android:label="fragment_blank5"
+        tools:layout="@layout/fragment_blank5" >
+        <action
+            android:id="@+id/cafeteriaToMainIT"
+            app:destination="@id/mainFragmentITSupport" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentITQuiz"
+        android:name="com.robot.robotappliaktion.BlankFragment7"
+        android:label="fragment_blank7"
+        tools:layout="@layout/fragment_blank7" >
+        <action
+            android:id="@+id/ITQuiztoMainEntertainment"
+            app:destination="@id/mainFragmentEntertainment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentITJokes"
+        android:name="com.robot.robotappliaktion.BlankFragment8"
+        android:label="fragment_blank8"
+        tools:layout="@layout/fragment_blank8" >
+        <action
+            android:id="@+id/ITJokestoMainEntertainment"
+            app:destination="@id/mainFragmentEntertainment" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.robot.robotappliaktion.welcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/connectToMainActivityFragment"
+            app:destination="@id/mainFragmentActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragmentActivity"
+        android:name="com.robot.robotappliaktion.mainFragmentActivity"
+        android:label="fragment_main_activity"
+        tools:layout="@layout/fragment_main_activity" >
+        <action
+            android:id="@+id/mainToITSupport"
+            app:destination="@id/mainFragmentITSupport" />
+        <action
+            android:id="@+id/mainToEntertainment"
+            app:destination="@id/mainFragmentEntertainment" />
+    </fragment>
+</navigation>
